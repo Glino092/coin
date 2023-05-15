@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "canisters": {
+    "coin_backend": {
+      "type": "motoko",
+      "main": "src/coin_backend/main.mo"
+    },
+    "coin_frontend": {
+      "type": "assets",
+      "source": [
+        "src/coin_frontend/assets"
+      ],
+      "dependencies": [
+        "coin_backend"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "output_env_file": ".env"
+}
